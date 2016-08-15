@@ -8,6 +8,7 @@
         
         $scope.createRoom = function() {
             ModalCtrl.addRoom($scope.room);
+            console.log($scope.room);
             $uibModalInstance.close();
         };
         $scope.cancel = function() {
