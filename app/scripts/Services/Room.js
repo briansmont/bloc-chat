@@ -7,6 +7,12 @@
         
         Room.all = rooms;
         
+        Room.bind = function() {
+            return rooms;
+        };
+       
+        
+        
         return Room;
     }
     
