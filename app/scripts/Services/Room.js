@@ -7,6 +7,11 @@
         
         Room.all = rooms;
         
+        Room.addRoom = function(room) {
+            rooms.$add({ roomName: "zzz" })
+        };
+        
+        
         Room.bind = function() {
             return rooms;
         };

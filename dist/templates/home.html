@@ -1,4 +1,16 @@
 <h1>Home Page</h1>
+
+<h2>Chat Rooms</h2>
+
+<div>
+    <button ng-click="home.open()">New Room</button>
+</div>
+<br>
+
+
+
+
+
 <div class="rooms" ng-repeat="room in home.rooms">
     <p class="room">{{ room.roomName }}</p>
 
