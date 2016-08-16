@@ -1,3 +1,9 @@
+.parent {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
 .pageHeading {
     font-family: "Arial Black", Gadget, sans-serif;
     font-style: normal;
@@ -16,7 +22,7 @@
     float: left;
     margin-right: 2%;
     height: 50em;
-    
+    background-color: white;
 }
 .chatControl h3 {
     text-align: center;
@@ -42,6 +48,7 @@
     display: block;
     height: 50em;
     border: .25em solid silver;
+    background-color: white;
 }
 .chatRoomName {
     font-style: italic;
