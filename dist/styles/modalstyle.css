@@ -1,7 +1,9 @@
 /* modal styling below */
 .modalWindow {
+    text-align: center;
     width: 33%;
     margin: auto;
     position: relative;
-    bottom: 35em;
+    top: 25em;
+    border: 1px double black;
 }
