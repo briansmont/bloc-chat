@@ -1,0 +1,7 @@
+/* modal styling below */
+.modalWindow {
+    width: 33%;
+    margin: auto;
+    position: relative;
+    bottom: 35em;
+}

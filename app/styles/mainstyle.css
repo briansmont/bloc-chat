@@ -1,0 +1,58 @@
+.pageHeading {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-style: normal;
+    text-align: center;
+    color: Black;
+}
+.main {
+    margin: auto;
+}
+
+/* styling for the chat control area */
+.chatControl {
+    display: block;
+    width: 15%;
+    border: .25em solid silver;
+    float: left;
+    margin-right: 2%;
+    height: 50em;
+    
+}
+.chatControl h3 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: -1em;
+}
+.buttonOpen {
+    padding-left: 2em;
+}
+.chatControl ul {
+    border-collapse: collapse;
+}
+.roomName {
+    text-decoration: underline;
+}
+
+
+
+
+/* styling for the chatroom area */
+.chatArea {
+    width: 99%;
+    display: block;
+    height: 50em;
+    border: .25em solid silver;
+}
+.chatRoomName {
+    font-style: italic;
+    color: red;
+}
+.messages {
+    color: blue;
+}
+.user {
+    text-decoration: underline;
+}
+.time {
+    font-style: italic;
+}
