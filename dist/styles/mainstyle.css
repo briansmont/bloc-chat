@@ -1,7 +1,12 @@
+html {
+    height: 100%;
+    
+}
 .parent {
     position: absolute;
     height: 100%;
     width: 100%;
+    background-color: dimgray;
 }
 
 .pageHeading {
@@ -18,7 +23,7 @@
 .chatControl {
     display: block;
     width: 15%;
-    border: .25em solid silver;
+    border: .25em solid grey;
     float: left;
     margin-right: 2%;
     height: 50em;
@@ -47,7 +52,7 @@
     width: 99%;
     display: block;
     height: 50em;
-    border: .25em solid silver;
+    border: .25em solid grey;
     background-color: white;
 }
 .chatRoomName {
