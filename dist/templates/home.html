@@ -9,19 +9,20 @@
 
 
         <br>
-        <div class="rooms" ng-repeat="room in home.rooms">
+        <div class="rooms" ng-repeat="room in main.rooms">
             <ul>
-                <li class="roomName">{{ room.roomName }}
-                </li>
+                <li><a ng-click="main.setRoom(room)"> {{room.roomName}} </a></li>
+                
             </ul>
         </div>
         <div class="buttonOpen">
-            <button ng-click="home.open()">Create New Room</button>
+            <button ng-click="main.open()">Create New Room</button>
         </div>
     </aside>
 
     <section class="chatArea">
         <h4 class="chatRoomName">Chat Room Name</h4>
+        <h3>Messages</h3>
         <p class="messages"><span class="user">UserName:</span> message <span class="time">11:11 AM</span></p>
         <p class="messages"><span class="user">UserName:</span> longer message <span class="time">11:11 AM</span></p>
         <p class="messages"><span class="user">UserName:</span> message message message message message <span class="time">11:11 AM</span></p>

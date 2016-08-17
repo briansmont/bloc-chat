@@ -9,7 +9,7 @@
         $stateProvider
             .state('home', {
                 url: '/',
-                controller: 'HomeCtrl as home',
+                controller: 'MainCtrl as main',
                 templateUrl: '/templates/home.html'
             })
             .state('ModalInstanceCtrl', {

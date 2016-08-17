@@ -22,9 +22,12 @@
         };
        
         Room.getMessages = function(roomId, callBack) {
-            messages.orderByChild('roomId').equalTo(roomId).on('value', function(messagesSnapshot) {
-                console.log(messagesSnapshot.val());
+            console.log("testing");
+            messageRef.orderByChild('roomId').equalTo(roomId).on('value', function(messages) {
+                console.log(messages.val());
+                callBack(messages.val());
             });
+        
         };
         
         

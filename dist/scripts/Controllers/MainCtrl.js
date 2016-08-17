@@ -1,7 +1,8 @@
 (function() {
-    function HomeCtrl($uibModal, Room) {
+    function MainCtrl($uibModal, Room, MessageService, $scope) {
         var ctrl = this;
         ctrl.rooms = Room.bind(); 
+        
         
         ctrl.open = function() {
             $uibModal.open({
@@ -15,9 +16,19 @@
             });
         };
         
+        ctrl.setRoom = function(room) {
+            $scope.roomTitle = room.name;
+            Room.getMessages(room.$id, function(messages) {
+                $scope.messages = messages;
+            });
+        };
+        ctrl.createMessage = function() {
+            MessageService.addRoom(ctrl.message);
+        }
+        
         
     }
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['$uibModal', 'Room', HomeCtrl]);
+        .controller('MainCtrl', ['$uibModal', 'Room', 'MessageService', '$scope', MainCtrl]);
 })();
