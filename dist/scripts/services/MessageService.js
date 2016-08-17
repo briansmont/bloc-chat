@@ -5,16 +5,25 @@
         var messageRef = firebase.database().ref().child("messages");
         var messages = $firebaseArray(messageRef);
         
-        MessageService.sendMessage = function(message) {
-            messages.$add({username: message.username,
-                          content: message.content,
-                          sentAt: firebase.ServerValue.TIMESTAMP,
-                          roomId: room 
-                          });
+        MessageService.send = function(message) {
+            messages.$add({content: message.content,
+                            roomId: message.roomId
+                        });
+            console.log("message send test");
         };
         MessageService.bind = function() {
             return messages;
         };
+        
+        
+        MessageService.getByRoomId = function(roomId) {
+            console.log(roomId);
+            return $firebaseArray(messageRef.orderByChild('roomId').equalTo(roomId));
+        };        
+        
+        
+        
+        
         
         return MessageService;
         

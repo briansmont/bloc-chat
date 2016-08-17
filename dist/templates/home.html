@@ -1,8 +1,4 @@
 <h1 class="pageHeading">Chat Page</h1>
-
-
-
-
 <section class="main">
     <aside class="chatControl">
         <h3>Rooms Available</h3>
@@ -21,11 +17,17 @@
     </aside>
 
     <section class="chatArea">
-        <h4 class="chatRoomName">Chat Room Name</h4>
+        <h4 class="chatRoomName">{{ roomTitle }}</h4>
         <h3>Messages</h3>
-        <p class="messages"><span class="user">UserName:</span> message <span class="time">11:11 AM</span></p>
-        <p class="messages"><span class="user">UserName:</span> longer message <span class="time">11:11 AM</span></p>
-        <p class="messages"><span class="user">UserName:</span> message message message message message <span class="time">11:11 AM</span></p>
-        <p class="messages"><span class="user">UserName:</span> message number 4 <span class="time">11:11 AM</span></p>
+        <p ng-repeat="message in messages"> {{message.content}}</p>
+    </section>
+    <section class="newMessages">
+        <form>
+            
+            <input type="text" class="newText" ng-model="message.content">
+            <button ng-click="main.sendMessage(message)">Submit</button>
+        
+        </form>
+    
     </section>
 </section>

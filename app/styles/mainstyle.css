@@ -68,3 +68,7 @@ html {
 .time {
     font-style: italic;
 }
+.newMessages {
+    position: relative;
+    left: 16%;
+}

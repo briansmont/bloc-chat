@@ -17,14 +17,14 @@
         };
         
         ctrl.setRoom = function(room) {
-            $scope.roomTitle = room.name;
-            Room.getMessages(room.$id, function(messages) {
-                $scope.messages = messages;
-            });
+            $scope.roomTitle = room.roomName;
+            console.log(room.roomName);
+            var messages = MessageService.getByRoomId(room.$id);
         };
-        ctrl.createMessage = function() {
-            MessageService.addRoom(ctrl.message);
-        }
+        ctrl.sendMessage = function(message) {
+            message.roomId = $scope.roomId;
+            MessageService.send(message);
+        };
         
         
     }
