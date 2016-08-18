@@ -24,9 +24,10 @@
             $scope.messages = MessageService.getByRoomId(room.$id);
         };
         ctrl.sendMessage = function(message) {
-            message.userName = $cookies.get('chatRoomCurrentUser');
+            message.userName = $cookies.get('blocChatCurrentUser');
             message.roomId = $scope.roomId;
             MessageService.send(message);
+            message.content = $scope.message.content;
         };
         
         

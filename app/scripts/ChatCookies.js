@@ -1,13 +1,14 @@
 (function() {
     function ChatCookies($cookies, $uibModal) {
         var currentUser = $cookies.get('blocChatCurrentUser');
-            console.log('testing for chatroom user name');
-            if (!currentUser || currentUser === ''){
+        console.log(currentUser);
+        if (!currentUser || currentUser === ''){
             $uibModal.open({
                 templateUrl: '/templates/login.html',
                 controller: 'LoginCtrl',
-                
+                size: 'sm'
             });
+            console.log("modal should open");
         }
     }
     
