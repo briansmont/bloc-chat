@@ -6,7 +6,8 @@
         var messages = $firebaseArray(messageRef);
         
         MessageService.send = function(message) {
-            messages.$add({content: message.content,
+            messages.$add({userName: message.userName,
+                            content: message.content,
                             roomId: message.roomId
                         });
             console.log("message send test");

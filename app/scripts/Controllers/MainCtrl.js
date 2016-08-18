@@ -1,5 +1,5 @@
 (function() {
-    function MainCtrl($uibModal, Room, MessageService, $scope) {
+    function MainCtrl($uibModal, Room, MessageService, $scope, $cookies) {
         var ctrl = this;
         ctrl.rooms = Room.bind(); 
         ctrl.currentRoom = null;
@@ -24,6 +24,7 @@
             $scope.messages = MessageService.getByRoomId(room.$id);
         };
         ctrl.sendMessage = function(message) {
+            message.userName = $cookies.get('chatRoomCurrentUser');
             message.roomId = $scope.roomId;
             MessageService.send(message);
         };
@@ -32,5 +33,5 @@
     }
     angular
         .module('blocChat')
-        .controller('MainCtrl', ['$uibModal', 'Room', 'MessageService', '$scope', MainCtrl]);
+        .controller('MainCtrl', ['$uibModal', 'Room', 'MessageService', '$scope', '$cookies', MainCtrl]);
 })();
