@@ -3,6 +3,7 @@
         var ctrl = this;
         ctrl.rooms = Room.bind(); 
         ctrl.currentRoom = null;
+        ctrl.room$id = null;
         
         ctrl.open = function() {
             $uibModal.open({
@@ -22,6 +23,8 @@
             $scope.roomTitle = room.roomName;
             console.log(room.roomName);
             $scope.messages = MessageService.getByRoomId(room.$id);
+            $scope.roomId = room.$id;
+            //ctrl.room$id = room.$id;
         };
         ctrl.sendMessage = function(message) {
             message.userName = $cookies.get('blocChatCurrentUser');
