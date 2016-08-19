@@ -1,14 +1,23 @@
 (function() {
     function ChatCookies($cookies, $uibModal) {
-        var currentUser = $cookies.get('blocChatCurrentUser');
-        console.log(currentUser);
-        if (!currentUser || currentUser === ''){
+        var userName = $cookies.get('blocChatCurrentUser');
+        if (!userName || userName === ''){
             $uibModal.open({
                 templateUrl: '/templates/login.html',
-                controller: 'LoginCtrl',
-                size: 'sm'
+                controller: function ($scope, $cookies, $uibModalInstance) {
+                    $scope.createUserName = function(userName) {
+                        if (userName && userName !== '') {
+                            $cookies.blocChatCurrentUser = userName;
+                            $uibModalInstance.close();
+                        } else {
+                            $scope.errorMessage = "Invalid Username";
+                        }
+                    };
+                },
+                size: 'sm',
+                keyboard: false,
+                backdrop: 'static'
             });
-            console.log("modal should open");
         }
     }
     

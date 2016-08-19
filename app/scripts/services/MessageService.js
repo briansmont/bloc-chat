@@ -7,8 +7,8 @@
         
         MessageService.send = function(message) {
             messages.$add({content: message.content,
-                            roomId: message.roomId
-                            //userName: message.userName
+                            roomId: message.roomId,
+                            userName: message.userName
                         });
         };
         MessageService.bind = function() {

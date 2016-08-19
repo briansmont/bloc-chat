@@ -3,7 +3,6 @@
         var ctrl = this;
         ctrl.rooms = Room.bind(); 
         ctrl.currentRoom = null;
-        ctrl.room$id = null;
         
         ctrl.open = function() {
             $uibModal.open({
@@ -19,18 +18,15 @@
         
         ctrl.setRoom = function(room) {
             ctrl.currentRoom = room;
-            console.log(ctrl.currentRoom);
             $scope.roomTitle = room.roomName;
             console.log(room.roomName);
             $scope.messages = MessageService.getByRoomId(room.$id);
             $scope.roomId = room.$id;
-            //ctrl.room$id = room.$id;
         };
         ctrl.sendMessage = function(message) {
-            message.userName = $cookies.get('blocChatCurrentUser');
+            message.userName = $cookies.blocChatCurrentUser;
             message.roomId = $scope.roomId;
             MessageService.send(message);
-            message.content = $scope.message.content;
         };
         
         
