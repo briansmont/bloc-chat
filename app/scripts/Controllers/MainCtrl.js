@@ -27,6 +27,7 @@
             message.userName = $cookies.blocChatCurrentUser;
             message.roomId = $scope.roomId;
             MessageService.send(message);
+            $scope.message.content = "";
         };
         
         

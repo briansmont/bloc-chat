@@ -19,12 +19,12 @@
     <section class="chatArea">
         <h4 class="chatRoomName">{{ roomTitle }}</h4>
         <h3>Messages</h3>
-        <p ng-repeat="message in messages">{{message.userName}}: {{message.content}}</p>
+        <p ng-repeat="message in messages"><span class="userName">{{message.userName}}:</span> {{message.content}}</p>
     </section>
     <section class="newMessages">
         <form>
             
-            <input type="text" class="newText" placeholder="your message here" ng-model="message.content">
+            <input type="text" class="newText" placeholder="send message here" ng-model="message.content">
             <button ng-click="main.sendMessage(message)">Submit</button>
         
         </form>

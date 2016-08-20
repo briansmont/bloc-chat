@@ -58,12 +58,14 @@ html {
 .chatRoomName {
     font-style: italic;
     color: red;
+    font-size: 2em;
 }
 .messages {
     color: blue;
 }
-.user {
+.userName {
     text-decoration: underline;
+    font-weight: bold;
 }
 .time {
     font-style: italic;
