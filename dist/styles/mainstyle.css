@@ -2,11 +2,52 @@ html {
     height: 100%;
     
 }
+body {
+    background-color: #cccccc;
+    font-family: Roboto;
+}
+
+//navbar styling
+
+.navbar {
+    position: relative;
+    padding: 0.5em;
+    background-color: aliceblue;
+    z-index: 1;
+}
+.navbar .page-name {
+    position: relative;
+    font-size: 2.5em;
+    left: 2em;
+}
+.navbar .links-container {
+    display: table;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100px;
+    text-decoration: none;
+}
+.links-container .navbar-link {
+    display: table-cell;
+    position: relative;
+    height: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+    vertical-align: middle;
+    font-size: 1em;
+    letter-spacing: .05em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
 .parent {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: dimgray;
 }
 
 .pageHeading {
@@ -23,7 +64,7 @@ html {
 .chatControl {
     display: block;
     width: 15%;
-    border: .25em solid grey;
+    border: .5em solid grey;
     float: left;
     margin-right: 2%;
     height: 50em;
@@ -52,20 +93,23 @@ html {
     width: 99%;
     display: block;
     height: 50em;
-    border: .25em solid grey;
+    border: .5em solid grey;
     background-color: white;
 }
 .chatRoomName {
     font-style: italic;
     color: red;
-    font-size: 2em;
+    font-size: 2.5em;
+    text-decoration: underline;
 }
 .messages {
     color: blue;
+    text-decoration: underline;
 }
 .userName {
     text-decoration: underline;
     font-weight: bold;
+    color: blue;
 }
 .time {
     font-style: italic;

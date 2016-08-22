@@ -1,13 +1,13 @@
 (function() {
     function ModalInstanceCtrl($uibModalInstance, Room, $scope) {
-        var ModalCtrl = this;
+        var ctrl = this;
         
-        ModalCtrl.addRoom = function(room) {
+        ctrl.addRoom = function(room) {
             Room.addRoom(room);
         };
         
         $scope.createRoom = function() {
-            ModalCtrl.addRoom($scope.room);
+            ctrl.addRoom($scope.room);
             console.log($scope.room);
             $uibModalInstance.close();
         };
